@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+
+	<div id="growler">
+
+		<label> Query result</label>
+
+		<div v-if="drinks.length===0">Retun drinks Data</div>
+
+		<div v-else-if="drinks.length === 2">
+	    2 drink was returned
+	  	</div>
+
+	  	<div v-else>{{ drinks.length }} drinks were returned</div> </p>
+
+<p v-show>Phalu</p>
+
+		<div v-show>
+
+		    {{drinks.length }}will be rendered here]
+		  </div>	
+		
+	</div>
+
+	
+<script>
+		var vm = new Vue({
+			el: "#growler",
+			data: {
+
+				drinks:[
+
+				{name:'7up',avgQ:2},
+
+				{name:'Pepsi',avgQ:5},
+
+				{name:'Coca-Cola',avgQ:9},
+
+				{name:'Cott',avgQ:4}
+
+				],
+				maxavgQ:7.0
+
+			}
+		
+			
+		})
+	</script>
+
+	
+
+</body>
+</html>

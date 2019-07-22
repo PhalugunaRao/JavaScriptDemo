@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+  	<TITLE>Learning javaScript</TITLE>
+  </head>
+  <body onload="showDate()">
+  	<div class="header">
+  	    <h1 id="mytest">Hello Plunker!</h1>
+        <p>With samplpe demo</p>		
+  	</div>
+  	<div class="container">
+  		<h1 id="time"></h1>
+  		<!-- button click text change
+  		<button onclick="this.innerHTML='you clicked'">Click me</button> -->
+  		<button onclick="showDate()">Click me</button>
+  		<br>
+  		<button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+  	</div>
+  	<script >
+
+function doClick(){
+	alert('my action');
+}
+function channgeText(){
+var heading=document.getElementById('mytest');
+heading.innerHTML='Hi geethika '
+	
+}
+function showDate(){
+	var time=document.getElementById('time');
+	time.innerHTML=Date();
+}
+function clearDate(){
+	var time=document.getElementById('time');
+	time.innerHTML='';
+}
+  		
+  	</script>
+    
+  </body>
+
+</html>

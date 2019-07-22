@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="/Users/phalurao/Documents/JavaScriptDemo/vue.js"></script>
+<style type="text/css" href="..\show.css" media="screen">
+	
+</style>
+</head>
+<body>
+	<div id="demo">
+  <button v-on:click="show = !show">
+    Toggle
+  </button>
+  <transition name="fade">
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+	<script>
+		
+		new Vue({
+	  el: '#demo',
+	  data: {
+	    show: true
+	  }
+	})
+		
+	</script>
+
+		
+	
+</body>
+</html>

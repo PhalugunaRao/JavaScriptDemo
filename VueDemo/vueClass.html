@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<style>
+		.headers {
+			font-family:'Verdana';
+			margin: 0;
+		}
+		.accent-color{
+			color: #FF6A00
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="growler">
+			<h1 v-text="appName" 
+			v-bind:class="{
+			'headers':true,
+			'accent-color':isOnline
+		}"></h1>
+	</div>
+
+	<script>
+		var growler = new Vue({
+			el: '#growler',
+			data:{
+				appName: 'Growler',
+				isOnline: false	
+				}
+		
+			
+		})
+	</script>
+
+</body>
+</html>

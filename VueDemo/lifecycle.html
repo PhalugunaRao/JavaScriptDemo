@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="/Users/phalurao/Documents/JavaScriptDemo/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{title}}
+		<button @click="title= 'Changed'">Update Title</button>
+		<button @click="destory">Destory</button>
+	</div>
+
+<script>
+
+	 new Vue({
+		el: "#app",
+		data:{
+			title:'hellow world'
+		},
+		beforeCreate: function(){
+			console.log('beforeCreate');
+		},
+		create: function(){
+			console.log('Create');
+		},
+		beforeMount: function(){
+			console.log('beforeMount()');
+
+		},
+		mounted: function(){
+			console.log('mounted()');
+		},
+		beforeUpdate: function(){
+			console.log('beforeUpdate');
+		},
+		update: function(){
+			console.log('update');
+		},
+		beforeDestroy: function(){
+			console.log('beforeDestory');
+		},
+		destoryed: function(){
+			console.log('destoryed()');
+		},
+		methods:{
+			destory: function(){
+				this.$destory();
+			}
+		}
+	
+		
+	})
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<style>
+		.headers {
+			font-family:'Verdana';
+			margin: 0;
+		}
+		.accent-color{
+			color: #FF6A00
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="growler">
+		<input v-model="query"
+		placeholder="Search">
+			<br><br> <br>
+			<div> Searching for: {{query}}</div>
+			<textarea v-model="emailMessage"></textarea>
+			<br>
+			<input type="checkbox" value="tea" v-model="searchIndexes">Tea<br>
+			<input type="checkbox" value="cofee" v-model="searchIndexes">Cofee<br>
+			<small>selected:{{searchIndexes}}</small>
+
+			<br>
+			<input type="radio" value="tea" v-model="radioIndexes">Tea<br>
+			<input type="radio" value="cofee" v-model="radioIndexes">Cofee<br>
+			<small>selected:{{radioIndexes}}</small>
+	</div>
+
+	<script>
+		var growler = new Vue({
+			el: '#growler',
+			data:{
+				appName: 'Growler',
+				query:'',
+				emailMessage:'',
+				searchIndexes:[],
+				radioIndexes:''
+				}
+		
+			
+		})
+	</script>
+
+</body>
+</html>

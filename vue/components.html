@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="/Users/phalurao/Documents/JavaScriptDemo/vuess.css">
+	<script src="/Users/phalurao/Documents/JavaScriptDemo/vue.js"></script>
+</head>
+<body>
+<div id="app-7">
+  <ol>
+    <!--
+      Now we provide each todo-item with the todo object
+      it's representing, so that its content can be dynamic.
+      We also need to provide each component with a "key",
+      which will be explained later.
+    -->
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      
+    ></todo-item>
+  </ol>
+</div>
+	<script src="/Users/phalurao/Documents/JavaScriptDemo/vues.js"></script>
+
+</body>
+</html>

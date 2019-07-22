@@ -1,0 +1,14 @@
+div {
+  width: 600px;
+  margin: 80 100 80 100;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+h1 {
+  margin: 20;
+  padding: 20px 0;    
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+  border: 5px solid black;
+}

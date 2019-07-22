@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+
+	<div id="growler">
+		<input 
+		v-model.lazy.trim="query"
+		placeholder="Search...">
+
+		<br>
+
+		<form>
+			<input v-model="query" type="search" placeholder="Search....">
+			<button type="button" v-on:click="executeSearch">Search</button>
+		</form>
+
+		<select v-model ="searchIndexes" multiple>
+			<option value="Ginger Tea">Tea</option>
+			<option value="Cofee ">Cofee</option>
+			<option value="Black Tea">Black Tea</option>
+			<option value="Milk ">Milk</option>
+		</select>
+		<div>Selected:{{searchIndexes}}</div>
+	</div>
+
+	<script>
+		var growler = new Vue({
+			el: '#growler',
+			data:{
+				appName: 'Growler',
+				query:'',
+				
+				searchIndexes:['Ginger Tea','Cofee'],
+				
+				},
+				methods:{
+					executeSearch:function(){
+						alert(this.query)
+					}
+				}
+		
+			
+		})
+	</script>
+
+</body>
+</html>

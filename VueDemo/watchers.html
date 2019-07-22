@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div id="growler">
+		<table>
+			<tr>
+				<th>Drinks</th>
+				<th>Price</th>
+				<th></th>
+			</tr>
+
+			<tr v-for="drink in drinks">
+				<td>{{drink.name}}</td>
+				<td>{{drink.price}}</td>
+				<td><button v-on:click="buy(drink)">buy</button></td>
+				</tr>
+
+				<tr>
+					<td>Subtotal</td>
+					<td>{{subTotal}}</td>
+					<td></td>
+				</tr>
+
+				<tr v-for="item in shoppingCart">
+				<td>{{item.name}}</td>
+				<td>{{item.price}}</td<>
+				<td></td>
+				</tr>
+
+				<tr>
+					<td>{{shoppingCart}}</td>
+					<td></td>
+				</tr>
+
+
+		</table>
+		
+	</div>
+
+<script >
+	var growler = new Vue({
+		el: "#growler",
+		data:{
+			drinks:[
+			{name:'Milk',price:2.80},
+			{name:'Water',price:2.38}
+			],
+			shoppingCart:[],
+			subTotal:0.00,
+			
+		},
+		watch: {
+			shoppingCart: function(){
+				this.updateSubTotal();
+			}
+		},
+		methods: {
+
+			updateSubTotal: function(){
+				var s = this.shoppingCart.length;
+				var t=0;
+				for(var i=0;i<s;i++){
+					t+=this.shoppingCart[i].price;
+				}
+				this.subTotal=t
+			},
+				buy: function(drink){
+					this.shoppingCart.push(drink);
+				}
+			}
+	
+		
+	})
+</script>
+</body>
+</html>

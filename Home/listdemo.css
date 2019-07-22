@@ -1,0 +1,33 @@
+body {
+  
+  padding: 1em;
+  margin: 10px 60px auto;
+  max-width: 33em;
+}
+h1 {
+  color: blue;
+  background-color: yellow;
+  border: 1px dashed black;
+  height: 50px;
+font-size: 100%;
+
+/*background-image: url(whatsapp_logo.jpg);
+background-position: 10px 10px;
+background-repeat: repeat-x;
+background-scroll: fixed;*/
+
+
+}
+div p + p {
+  padding-top: 0;
+}
+
+div p, #test:first-line {
+  background-color: red;
+  background-style: none
+}
+
+p {
+  color: black;
+  padding: 50px 15px 15px 5px;
+}

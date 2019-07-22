@@ -1,0 +1,77 @@
+#winning {
+  background-color: red;
+  border: 3px dashed black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+
+
+
+
+
+
+a {
+  color: blue;
+  font-weight: bold;
+}
+/*a:visited {
+  color: yellow;
+}*/
+
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}
+
+[href^=http]::after {
+  content: '⤴';
+}
+
+
+/* All elements with the attribute "data-vegetable"
+   are given green text */
+[data-vegetable] {
+  color: green;
+  font-size: 20px;
+}
+
+/*[data-quantity]{
+	color: red
+}*/
+
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+  color: red;
+}
+
+/* All elements with the attribute "data-vegetable",
+   containing the value "spicy", even among others,
+   are given a red text color */
+[data-vegetable~="spicy"] {
+  color: red;
+}
+
+[lang|="fr"] {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+[data-quantity$="kg"] {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+[data-quantity^="optional"] {
+  opacity: 0.5;
+}

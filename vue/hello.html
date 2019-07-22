@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello world</title>
+	<script src="/Users/phalurao/Documents/JavaScriptDemo/vue.js"></script>
+
+</head>
+<body>
+	<div id="hello">
+    {{ mymessage }}
+  </div>
+
+  <script>
+    var print = new Vue({
+      el: '#hello',
+      data: {
+        mymessage: 'Hello World!'
+      }
+    })
+    </script>
+</body>
+</html>

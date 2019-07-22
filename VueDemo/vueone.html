@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+	<div id="growler">
+			<h1 v-text="appName" v-bind:style="appStyle"></h1>
+	</div>
+
+	<script>
+		var growler = new Vue({
+			el: '#growler',
+			data:{
+				appName: 'Growler',
+
+				appStyle:{
+				color: '#FF6A00',
+				fontFamily:'Areal',
+				margin:0
+			}
+				}
+		
+			
+		})
+	</script>
+
+</body>
+</html>

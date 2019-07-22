@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+
+	<div id="growler">
+		<input 
+		v-modeltype="" name="">
+
+		<select v-model ="searchIndexes" multiple>
+			<option value="Ginger Tea">Tea</option>
+			<option value="Cofee ">Cofee</option>
+			<option value="Black Tea">Black Tea</option>
+			<option value="Milk ">Milk</option>
+		</select>
+		<div>Selected:{{searchIndexes}}</div>
+	</div>
+
+	<script>
+		var growler = new Vue({
+			el: '#growler',
+			data:{
+				appName: 'Growler',
+				query:'',
+				emailMessage:'',
+				searchIndexes:['Ginger Tea','Cofee'],
+				radioIndexes:''
+				}
+		
+			
+		})
+	</script>
+
+</body>
+</html>

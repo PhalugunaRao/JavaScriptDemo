@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+  	<TITLE>Learning javaScript</TITLE>
+  </head>
+  <body>
+  	<div class="header">
+  	    <h1>Hello Plunker!</h1>
+        <p>With samplpe demo</p>		
+  	</div>
+  	<div class="container">
+  		<h2>Hello Plunker!</h2>
+        <p>With samplpe demo</p>
+  	</div>
+  	<script >
+
+  		var Person={
+  			firstname:'phalguna',
+  			lastname:'rao',
+  			age:35,
+  			children:['Geethika'],
+  			address:{
+  				village:'Tholapi',
+  				dist:'Srikakulam'
+  			},
+  			fullname: function(){
+  				return this.firstname+ " "+this.lastname;
+  			}
+
+  		}
+  		//console.log(Person.address.village);
+  		console.log(Person.fullname);
+  		
+  	</script>
+    
+  </body>
+
+</html>
